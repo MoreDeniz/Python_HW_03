@@ -6,7 +6,7 @@
 
 def get_list(n):
     list_num = []
-    for i in range (1, n):
+    for i in range (1, n + 1):
         list_num.append(random.randint(11, 9999) / 100)
     return list_num
 

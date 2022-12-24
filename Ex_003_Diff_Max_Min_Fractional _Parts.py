@@ -10,10 +10,10 @@ def get_list(n):
         list_num.append(random.randint(11, 9999) / 100)
     return list_num
 
-def fract_part(num_list):
+def fract_part(list_num):
     new_list = []
     for i in range(len(list_num)):
-        num = round(list_num[i] - int(list_num[i]), 2)
+        num = round(list_num[i] - int(list_num[i]), 2) # зануляем целую часть
         new_list.append(num)
     return new_list
 

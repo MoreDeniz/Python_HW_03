@@ -14,7 +14,8 @@ def fract_part(list_num):
     new_list = []
     for i in range(len(list_num)):
         num = round(list_num[i] - int(list_num[i]), 2) # зануляем целую часть
-        new_list.append(num)
+        if num != 0:
+            new_list.append(num)
     return new_list
 
 def diff(list_):

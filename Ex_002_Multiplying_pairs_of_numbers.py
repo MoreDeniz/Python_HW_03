@@ -28,7 +28,6 @@
 # print(f'{my_list} => {multy_list}')
 
 from random import randint as RI
-
 my_list = [RI(0, 10) for _ in range(RI(3, 10))]
 
 if len(my_list) % 2 == 0:

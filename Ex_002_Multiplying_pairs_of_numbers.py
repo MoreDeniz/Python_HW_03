@@ -28,17 +28,11 @@
 # print(f'{my_list} => {multy_list}')
 
 from random import randint as RI
-my_list = [RI(0, 10) for _ in range(RI(3, 10))]
 
-if len(my_list) % 2 == 0:
-    left_list = [my_list[i] for i in range(len(my_list) // 2)]
-    right_list = list([my_list[len(my_list) - 1 -i] for i in range(len(my_list) // 2)])
-else:
-    left_list = [my_list[i] for i in range(len(my_list) // 2 + 1)]
-    right_list = list([my_list[len(my_list) - 1 -i] for i in range(len(my_list) // 2 + 1)])
+n = int(input('Enter natural number: '))
+my_list = [RI(11, 9999) / 100 for _ in range(1, n + 1)]
 
-a = []
-for i, j in zip(left_list, right_list):
-    a.append(i * j)
-print(f'{my_list} => {a}')
-
+fract_parts = list(map(lambda x: round(x - int(x), 2), my_list))
+different = round(max(fract_parts, key = lambda i: round(float(i), 2)) \
+            - min(fract_parts, key = lambda i: round(float(i), 2)), 2) 
+print(f'{my_list} -> {different}')

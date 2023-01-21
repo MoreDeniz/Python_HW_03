@@ -41,3 +41,4 @@ a = []
 for i, j in zip(left_list, right_list):
     a.append(i * j)
 print(f'{my_list} => {a}')
+
